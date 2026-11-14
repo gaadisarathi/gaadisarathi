@@ -1,0 +1,1558 @@
+
+/* =====================================
+   GAADI SARATHI
+   RED & BLACK AUTOMOTIVE THEME
+===================================== */
+
+:root {
+    --red: #e21b23;
+    --red-dark: #a90e15;
+    --black: #080808;
+    --dark: #111111;
+    --white: #ffffff;
+    --grey: #a3a3a3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    transition: background 0.35s ease, height 0.35s ease;
+}
+
+.navbar.scrolled {
+    height: 72px;
+    background: rgba(5, 5, 5, 0.96);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+}
+
+.logo strong {
+    color: var(--red);
+}
+
+.logo-icon {
+    width: 39px;
+    height: 39px;
+    background: var(--red);
+    display: grid;
+    place-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 27px;
+    font-weight: 900;
+    transform: skew(-8deg);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #c5c5c5;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--white);
+}
+
+.nav-links a.active::after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin-top: 6px;
+    background: var(--red);
+}
+
+.nav-button {
+    background: var(--red);
+    padding: 13px 22px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.nav-button span {
+    margin-left: 8px;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    background: #ff2933;
+    transform: translateY(-3px);
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: 120px 7% 100px;
+
+    background-image: url("../public/images/gaadi/sedan-black-red.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #080808;
+}
+
+/* LEFT BLACK FADE */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.99) 0%,
+            rgba(0,0,0,0.94) 17%,
+            rgba(0,0,0,0.83) 32%,
+            rgba(0,0,0,0.58) 47%,
+            rgba(0,0,0,0.18) 70%,
+            rgba(0,0,0,0.04) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(0,0,0,0.8) 0%,
+            transparent 28%,
+            transparent 75%,
+            rgba(0,0,0,0.25) 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    animation: heroEnter 1s ease forwards;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #d1d1d1;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.red-line {
+    display: inline-block;
+    width: 35px;
+    height: 2px;
+    background: var(--red);
+}
+
+.hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(65px, 8vw, 115px);
+    font-weight: 900;
+    line-height: 0.91;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: var(--red);
+}
+
+.hero-description {
+    max-width: 470px;
+    color: #c0c0c0;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-top: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    background: var(--red);
+    padding: 17px 25px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.primary-button span {
+    font-size: 17px;
+}
+
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.secondary-button:hover {
+    color: var(--red);
+}
+
+.secondary-button span {
+    font-size: 18px;
+}
+
+/* HERO STATS */
+
+.hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 65px;
+}
+
+.stat h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--red);
+    font-size: 28px;
+}
+
+.stat p {
+    color: #aaa;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    margin-top: 3px;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 34px;
+    background: rgba(255,255,255,0.2);
+}
+
+/* HERO BOTTOM */
+
+.hero-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 7%;
+    right: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.scroll-indicator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #aaa;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.scroll-line {
+    width: 35px;
+    height: 1px;
+    background: var(--red);
+}
+
+.hero-caption {
+    font-size: 9px;
+    color: #888;
+    letter-spacing: 2px;
+}
+
+/* =====================================
+   EXPLORE SECTION
+===================================== */
+
+.explore-section {
+    padding: 110px 7%;
+    background: #0b0b0b;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.section-label {
+    display: block;
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-heading h2,
+.about-content h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(45px, 6vw, 75px);
+    font-weight: 900;
+    line-height: 0.95;
+}
+
+.section-heading h2 span,
+.about-content h2 span {
+    color: var(--red);
+}
+
+.section-heading > p {
+    max-width: 330px;
+    color: var(--grey);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.explore-card {
+    min-height: 280px;
+    padding: 30px;
+    background: linear-gradient(145deg, #191919, #0d0d0d);
+    border: 1px solid #252525;
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+/* Removed the left-edge hover slider from the home explore cards. */
+.explore-card::before { content: none; }
+
+.explore-card:hover {
+    transform: translateY(-7px);
+    border-color: #4a2020;
+}
+
+
+.card-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #555;
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.card-content {
+    margin-top: 35px;
+}
+
+.card-content > span {
+    color: var(--red);
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.card-content h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 29px;
+    margin: 9px 0;
+}
+
+.card-content p {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.card-content a {
+    display: inline-block;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: 22px;
+    transition: color 0.3s;
+}
+
+.card-content a:hover {
+    color: var(--red);
+}
+
+/* =====================================
+   ABOUT SECTION
+===================================== */
+
+/* =====================================
+   ABOUT SECTION — CINEMATIC CAR BACKGROUND
+===================================== */
+.about-section {
+    min-height: 440px;
+    padding: 100px 7%;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #101010;
+    background-image:
+        linear-gradient(90deg,
+            rgba(0,0,0,.96) 0%,
+            rgba(0,0,0,.86) 25%,
+            rgba(0,0,0,.55) 45%,
+            rgba(0,0,0,.12) 72%,
+            rgba(0,0,0,.02) 100%),
+        linear-gradient(0deg, rgba(0,0,0,.18), rgba(0,0,0,.02)),
+        url("../public/images/gaadi/about-car-poster.png");
+    background-size: cover;
+    background-position: center, center, 72% 54%;
+    background-repeat: no-repeat;
+}
+
+.about-content {
+    max-width: 560px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-content p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 450px;
+    margin: 25px 0 30px;
+}
+
+footer {
+    background: #050505;
+    padding: 50px 7% 20px;
+}
+
+.footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #222;
+}
+
+.footer-car-poster {
+    display: block;
+    width: 220px;
+    height: 124px;
+    flex: 0 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: #080808;
+}
+
+.footer-car-poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 57%;
+}
+
+/* Footer logo placeholder — retains the former poster footprint. */
+.footer-logo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(255,255,255,.32);
+    border-radius: 5px;
+    background: rgba(255,255,255,.025);
+    color: #888;
+    text-decoration: none;
+    transition: border-color .25s ease, color .25s ease, background .25s ease;
+}
+.footer-logo-placeholder span {
+    font: 700 10px/1 'Inter', sans-serif;
+    letter-spacing: 2px;
+}
+.footer-logo-placeholder:hover {
+    border-color: rgba(220,35,42,.65);
+    color: #bbb;
+    background: rgba(255,255,255,.04);
+}
+
+.footer-main > p,
+.back-top {
+    color: #888;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.back-top {
+    transition: color 0.3s;
+}
+
+.back-top:hover {
+    color: var(--red);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+    color: #666;
+    font-size: 10px;
+}
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+        background-position: 58% center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,0.98),
+                rgba(0,0,0,0.88) 40%,
+                rgba(0,0,0,0.35) 100%
+            ),
+            linear-gradient(
+                0deg,
+                rgba(0,0,0,0.7),
+                transparent 50%
+            );
+    }
+
+    .explore-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .explore-card:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 72px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .logo-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 23px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1002;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        padding: 25px 7%;
+        background: rgba(5,5,5,0.98);
+        border-top: 1px solid #222;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: 0.3s;
+    }
+
+    .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .hero {
+        min-height: 100svh;
+        padding: 125px 7% 110px;
+        background-position: 62% center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,0.98) 0%,
+                rgba(0,0,0,0.88) 55%,
+                rgba(0,0,0,0.48) 100%
+            ),
+            linear-gradient(
+                0deg,
+                rgba(0,0,0,0.85),
+                transparent 55%
+            );
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: clamp(58px, 13vw, 82px);
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+        max-width: 340px;
+    }
+
+    .hero-buttons {
+        gap: 20px;
+    }
+
+    .primary-button {
+        padding: 15px 18px;
+        font-size: 10px;
+    }
+
+    .secondary-button {
+        font-size: 10px;
+    }
+
+    .hero-stats {
+        margin-top: 50px;
+        gap: 17px;
+    }
+
+    .stat h3 {
+        font-size: 24px;
+    }
+
+    .stat p {
+        font-size: 8px;
+    }
+
+    .hero-caption {
+        display: none;
+    }
+
+    .hero-bottom {
+        bottom: 25px;
+        left: 7%;
+    }
+
+    .explore-section {
+        padding: 75px 7%;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading > p {
+        margin-top: 20px;
+    }
+
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .explore-card:last-child {
+        grid-column: auto;
+    }
+
+    .explore-card {
+        min-height: 250px;
+    }
+
+    .about-section {
+        padding: 80px 7%;
+        min-height: 400px;
+    }
+
+    .about-decoration {
+        display: none;
+    }
+
+    .footer-main {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-car-poster {
+        width: min(220px, 100%);
+        height: 124px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* =====================================
+   HERO - DESKTOP
+===================================== */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 7% 100px;
+
+    background-image:
+        url("../public/images/hero-poster.jpg");
+
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+
+    background-color: #050505;
+}
+
+/* BLACK GRADIENT ON LEFT */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,1) 0%,
+            rgba(0,0,0,0.97) 15%,
+            rgba(0,0,0,0.85) 30%,
+            rgba(0,0,0,0.60) 45%,
+            rgba(0,0,0,0.25) 65%,
+            rgba(0,0,0,0.05) 85%,
+            rgba(0,0,0,0.02) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(0,0,0,0.65) 0%,
+            transparent 30%,
+            transparent 80%,
+            rgba(0,0,0,0.2) 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+}
+
+/* =====================================
+   HERO - MOBILE
+===================================== */
+
+@media (max-width: 650px) {
+
+    .hero {
+        min-height: 100svh;
+
+        padding: 120px 7% 100px;
+
+        justify-content: center;
+        align-items: center;
+
+        background-position: center center;
+        background-size: cover;
+
+        text-align: left;
+    }
+
+    /* DARKEN THE ENTIRE CAR IMAGE */
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0,0,0,0.65) 0%,
+                rgba(0,0,0,0.48) 35%,
+                rgba(0,0,0,0.72) 65%,
+                rgba(0,0,0,0.90) 100%
+            ),
+            rgba(0,0,0,0.30);
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(58px, 13vw, 78px);
+    }
+
+    .hero-description {
+        max-width: 340px;
+    }
+
+    .hero-stats {
+        margin-top: 40px;
+    }
+}
+
+/* SMALLER MOBILE SCREENS */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-buttons {
+        gap: 15px;
+    }
+
+    .hero-stats {
+        gap: 12px;
+    }
+}
+
+/* =====================================
+   GAADI SARATHI — LIGHTWEIGHT BUTTONS
+   Transparent surfaces with subtle red outlines
+===================================== */
+.nav-button,
+.primary-button {
+    background: transparent;
+    border: 1px solid rgba(229, 57, 53, .72);
+    color: var(--white);
+    box-shadow: none;
+}
+.nav-button:hover,
+.primary-button:hover {
+    background: rgba(229, 57, 53, .10);
+    border-color: rgba(229, 57, 53, .95);
+    color: #fff;
+    transform: translateY(-2px);
+}
+.secondary-button {
+    background: transparent;
+}
+
+
+/* =============================================
+   PURE BLACK SECTION BACKGROUNDS
+   Keep photography, overlays, cards and CTA colours intact.
+============================================= */
+.explore-section,
+.about-section,
+.page-section,
+.simple-page-hero,
+.how-page,
+.how-problem,
+.how-approach,
+.how-evaluate,
+.how-closing,
+.discover-page,
+.discover-problem,
+.discover-solution,
+.discover-process,
+.discover-trust,
+.discover-final-cta,
+.about-page,
+.about-beliefs,
+.about-unbiased,
+.about-final,
+.vehicle-showcase-section,
+.form-layout-section,
+.form-bottom-cta,
+.form-footer {
+    background-color: #000000 !important;
+}
+
+/* Replace tinted section gradients with a true black canvas.
+   Background images on hero/photo layers remain untouched. */
+.page-section,
+.simple-page-hero,
+.how-problem,
+.how-approach,
+.how-evaluate,
+.how-closing,
+.discover-problem,
+.discover-solution,
+.discover-process,
+.discover-trust,
+.discover-final-cta,
+.about-beliefs,
+.about-unbiased,
+.about-final,
+.vehicle-showcase-section,
+.form-layout-section,
+.form-bottom-cta {
+    background-image: none !important;
+}
+
+
+/* =============================================
+   BLACK GLASS CARDS — HOME PAGE
+   Near-black translucent glass, retaining the
+   existing blue edge glow and red hover accent.
+============================================= */
+.explore-card {
+    background: linear-gradient(145deg,
+        rgba(18, 18, 20, 0.88),
+        rgba(3, 3, 4, 0.94)) !important;
+    border-color: rgba(125, 165, 220, 0.24) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(125%);
+    backdrop-filter: blur(14px) saturate(125%);
+    box-shadow:
+        0 0 0 1px rgba(73, 145, 255, 0.05),
+        0 12px 34px rgba(0, 0, 0, 0.48),
+        0 0 22px rgba(42, 126, 255, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.055);
+}
+.explore-card:hover {
+    background: linear-gradient(145deg,
+        rgba(20, 20, 23, 0.94),
+        rgba(5, 5, 7, 0.98)) !important;
+    border-color: rgba(105, 174, 255, 0.68) !important;
+    box-shadow:
+        0 0 0 1px rgba(73, 145, 255, 0.14),
+        0 14px 38px rgba(0, 0, 0, 0.52),
+        0 0 30px rgba(42, 126, 255, 0.24),
+        inset 0 0 18px rgba(42, 126, 255, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 650px) {
+    .about-section {
+        min-height: 520px;
+        padding: 85px 7%;
+        background-position: center, center, 62% center;
+        background-image:
+            linear-gradient(90deg, rgba(0,0,0,.94) 0%, rgba(0,0,0,.78) 48%, rgba(0,0,0,.38) 100%),
+            linear-gradient(0deg, rgba(0,0,0,.42), rgba(0,0,0,.16)),
+            url("../public/images/gaadi/about-car-poster.png");
+    }
+}
+
+
+/* Subtle edge fade for the lower home-page car background */
+.about-section {
+    position: relative;
+    isolation: isolate;
+}
+.about-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 68% 52%,
+        rgba(0,0,0,0) 38%,
+        rgba(0,0,0,.12) 62%,
+        rgba(0,0,0,.48) 100%);
+}
+.about-section .about-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =============================================
+   HOME — THREE-POSTER AUTOMOTIVE STORY
+   Hero poster -> middle coupe poster -> lower poster
+============================================= */
+
+/* The middle image is its own full-width poster panel,
+   rather than being buried behind the intro cards. */
+.middle-poster {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-height: clamp(390px, 48vw, 650px);
+    overflow: hidden;
+    background-color: #050505;
+    background-image:
+        linear-gradient(180deg,
+            #050505 0%,
+            rgba(5,5,5,.60) 9%,
+            rgba(5,5,5,.10) 28%,
+            rgba(5,5,5,.08) 72%,
+            rgba(5,5,5,.62) 91%,
+            #050505 100%),
+        linear-gradient(90deg,
+            rgba(0,0,0,.34) 0%,
+            rgba(0,0,0,.04) 35%,
+            rgba(0,0,0,.02) 70%,
+            rgba(0,0,0,.22) 100%),
+        url("../public/images/gaadi/middle-car-poster.png");
+    background-size: 100% 100%, 100% 100%, cover;
+    background-position: center, center, center 54%;
+    background-repeat: no-repeat;
+}
+
+/* A separate edge veil guarantees a visible feather into the black page. */
+.middle-poster::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(180deg,
+        #050505 0%,
+        rgba(5,5,5,.28) 13%,
+        transparent 31%,
+        transparent 69%,
+        rgba(5,5,5,.30) 87%,
+        #050505 100%);
+}
+
+.middle-poster-content {
+    position: absolute;
+    left: 7%;
+    bottom: 17%;
+    z-index: 2;
+}
+.middle-poster-content span {
+    color: rgba(255,255,255,.72);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 12px #000;
+}
+
+/* Intro remains its original charcoal section; the coupe is no longer
+   hidden underneath the content cards. */
+.explore-section {
+    position: relative;
+    isolation: isolate;
+    background: #0b0b0b !important;
+}
+
+/* Lower poster: slightly lower framing plus unmistakable top/bottom fades. */
+body:not(.about-page) .about-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #050505 !important;
+    background-image:
+        linear-gradient(90deg,
+            rgba(0,0,0,.94) 0%,
+            rgba(0,0,0,.82) 25%,
+            rgba(0,0,0,.48) 47%,
+            rgba(0,0,0,.10) 76%,
+            rgba(0,0,0,.06) 100%),
+        url("../public/images/gaadi/about-car-poster.png") !important;
+    background-size: 100% 100%, cover !important;
+    background-position: center, 72% 64% !important;
+    background-repeat: no-repeat !important;
+}
+body:not(.about-page) .about-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(180deg,
+        #050505 0%,
+        rgba(5,5,5,.36) 13%,
+        transparent 34%,
+        transparent 68%,
+        rgba(5,5,5,.42) 88%,
+        #050505 100%);
+}
+body:not(.about-page) .about-section .about-content {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 650px) {
+    .middle-poster {
+        min-height: 360px;
+        background-position: center, center, 54% center;
+    }
+    body:not(.about-page) .about-section {
+        min-height: 480px;
+        background-position: center, 66% 60% !important;
+    }
+}
+
+/* RESPONSIVE POSTER LAYERS + HOME SPLIT LAYOUT */
+.hero, .middle-poster, body:not(.about-page) .about-section { background-image:none !important; }
+.poster-image { position:absolute; z-index:0; display:block; max-width:none; pointer-events:none; }
+.hero { overflow:hidden; isolation:isolate; }
+.hero-poster-image { inset:0; width:100%; height:100%; object-fit:contain; object-position:center right; background:#050505; }
+.hero-overlay { z-index:1; }
+.hero-content, .hero-bottom { z-index:2; }
+.middle-poster { min-height:clamp(620px, 58vw, 820px); padding:clamp(56px,7vw,100px) 7%; display:flex; align-items:center; overflow:hidden; background:#050505; }
+.middle-poster-image { inset:0; width:100%; height:100%; object-fit:contain; object-position:center center; background:#050505; }
+.middle-poster-shade { position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.58) 33%,rgba(0,0,0,.12) 68%,rgba(0,0,0,.30) 100%),linear-gradient(180deg,#050505 0%,transparent 17%,transparent 82%,#050505 100%); }
+.middle-layout { position:relative; z-index:2; width:100%; display:grid; grid-template-columns:minmax(0,1fr) minmax(260px,.72fr); align-items:center; gap:clamp(28px,5vw,76px); }
+.middle-copy { max-width:540px; }
+.middle-copy h2 { font-family:'Barlow Condensed',sans-serif; font-size:clamp(48px,6.4vw,88px); line-height:.92; letter-spacing:-1px; margin:18px 0 22px; color:#fff; }
+.middle-copy h2 span { color:#e33a36; }
+.middle-copy p { max-width:440px; color:#d0d0d0; font-size:14px; line-height:1.9; }
+.middle-layout .explore-grid { display:flex; flex-direction:column; gap:12px; width:100%; }
+.middle-layout .explore-card { min-height:0; padding:16px 18px; display:grid; grid-template-columns:36px 1fr; gap:12px; border-radius:13px; background:rgba(12,12,12,.76); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
+.middle-layout .card-number { font-size:20px; }
+.middle-layout .card-content span { font-size:9px; letter-spacing:2px; }
+.middle-layout .card-content h3 { font-size:clamp(17px,1.7vw,22px); margin:4px 0; }
+.middle-layout .card-content p { font-size:11px; line-height:1.5; margin:3px 0 8px; }
+.middle-layout .card-content a { font-size:10px; }
+body:not(.about-page) .about-section { min-height:480px; background:#050505 !important; }
+.about-poster-image { inset:0; width:100%; height:100%; object-fit:contain; object-position:72% 60%; background:#050505; }
+.about-poster-shade { position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.78) 28%,rgba(0,0,0,.25) 65%,rgba(0,0,0,.08) 100%),linear-gradient(180deg,#050505 0%,transparent 18%,transparent 80%,#050505 100%); }
+body:not(.about-page) .about-section .about-content { z-index:2; }
+@media(max-width:760px) {
+ .hero-poster-image { object-position:62% center; }
+ .middle-poster { min-height:0; padding:76px 6% 82px; }
+ .middle-poster-image { object-position:58% center; opacity:.88; }
+ .middle-layout { grid-template-columns:1fr; gap:26px; }
+ .middle-copy { max-width:100%; }
+ .middle-copy h2 { font-size:clamp(48px,13vw,72px); }
+ .middle-layout .explore-grid { max-width:520px; margin-left:auto; }
+ .middle-layout .explore-card { padding:13px 15px; }
+ body:not(.about-page) .about-section { min-height:460px; }
+ .about-poster-image { object-position:62% center; }
+}
+
+/* HOME UPDATE — one translucent Discover / Learn / Experience panel */
+.middle-layout .journey-panel {
+    width: min(100%, 480px);
+    justify-self: end;
+    padding: clamp(18px, 2.2vw, 28px);
+    border: 1px solid rgba(255,255,255,.20);
+    border-radius: 18px;
+    background: rgba(8, 9, 12, .48);
+    -webkit-backdrop-filter: blur(16px) saturate(125%);
+    backdrop-filter: blur(16px) saturate(125%);
+    box-shadow: 0 18px 55px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.10);
+}
+.middle-layout .journey-step {
+    display: grid;
+    grid-template-columns: 46px minmax(0,1fr);
+    align-items: start;
+    gap: 14px;
+    padding: 15px 2px;
+}
+.middle-layout .journey-step + .journey-step {
+    border-top: 1px solid rgba(255,255,255,.16);
+}
+.middle-layout .journey-number {
+    color: #ed4944;
+    font: 700 25px/1 'Barlow Condensed', sans-serif;
+    letter-spacing: .5px;
+}
+.middle-layout .journey-step h3 {
+    margin: 0 0 5px;
+    color: #fff;
+    font: 700 clamp(19px, 2vw, 25px)/1 'Barlow Condensed', sans-serif;
+    letter-spacing: 1.2px;
+}
+.middle-layout .journey-step p {
+    margin: 0;
+    max-width: 360px;
+    color: rgba(255,255,255,.82);
+    font: 400 12px/1.7 'Inter', sans-serif;
+}
+/* The supplied lower poster is a landscape 16:9 image; show the complete vehicle. */
+body:not(.about-page) .about-poster-image {
+    object-fit: contain;
+    object-position: center center;
+    background: #050505;
+}
+body:not(.about-page) .about-poster-shade {
+    background: linear-gradient(90deg,rgba(0,0,0,.90) 0%,rgba(0,0,0,.66) 28%,rgba(0,0,0,.18) 62%,rgba(0,0,0,.05) 100%),
+                linear-gradient(180deg,#050505 0%,transparent 16%,transparent 82%,#050505 100%);
+}
+@media (max-width:760px) {
+    .middle-layout .journey-panel { width:100%; justify-self:stretch; }
+    .middle-layout .journey-step { grid-template-columns:40px minmax(0,1fr); padding:13px 0; }
+    body:not(.about-page) .about-poster-image { object-position:center center; }
+}
+
+
+/* HOME MIDDLE POSTER — desktop editorial layout:
+   welcome copy anchored upper-left; translucent journey strip spans the bottom. */
+@media (min-width: 761px) {
+    .middle-poster {
+        min-height: clamp(700px, 62vw, 860px);
+        padding: clamp(54px, 5.5vw, 82px) 7% clamp(38px, 4.2vw, 60px);
+        align-items: stretch;
+    }
+    .middle-poster-image { object-fit: contain; object-position: center center; }
+    .middle-poster-shade {
+        background: linear-gradient(90deg, rgba(0,0,0,.50) 0%, rgba(0,0,0,.16) 38%, rgba(0,0,0,.02) 72%, rgba(0,0,0,.18) 100%),
+                    linear-gradient(180deg, rgba(0,0,0,.44) 0%, transparent 32%, transparent 56%, rgba(0,0,0,.48) 100%);
+    }
+    .middle-layout {
+        min-height: 100%; width: 100%; display: flex; flex-direction: column;
+        align-items: stretch; justify-content: space-between; gap: 36px;
+    }
+    .middle-copy { align-self: flex-start; max-width: min(560px, 48%); margin: 0; }
+    .middle-layout .journey-panel {
+        align-self: stretch; justify-self: auto; width: 100%; max-width: none;
+        display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0;
+        padding: 15px 22px; border-radius: 16px;
+        background: rgba(8, 9, 12, .52); border-color: rgba(255,255,255,.22);
+    }
+    .middle-layout .journey-step {
+        min-width: 0; grid-template-columns: 42px minmax(0,1fr); align-items: start;
+        gap: 10px; padding: 9px 17px;
+    }
+    .middle-layout .journey-step + .journey-step { border-top: 0; border-left: 1px solid rgba(255,255,255,.18); }
+    .middle-layout .journey-number { font-size: 23px; }
+    .middle-layout .journey-step h3 { font-size: clamp(18px, 1.65vw, 23px); }
+    .middle-layout .journey-step p { font-size: 11px; line-height: 1.6; }
+}
+
+/* FINAL HOME MIDDLE SECTION — full car poster first, journey steps below.
+   The journey list is intentionally NOT a glass/translucent panel. */
+.middle-poster {
+    display: block !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 7% clamp(64px, 7vw, 100px) !important;
+    overflow: hidden;
+    background: #050505 !important;
+}
+.middle-poster-image {
+    inset: 0 0 auto 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1672 / 941;
+    object-fit: contain !important;
+    object-position: center top !important;
+    background: #050505;
+    opacity: 1 !important;
+}
+.middle-poster-shade {
+    inset: 0 0 auto 0 !important;
+    height: 56.28vw !important;
+    min-height: 0 !important;
+    background: linear-gradient(90deg, rgba(0,0,0,.48) 0%, rgba(0,0,0,.12) 34%, transparent 70%),
+                linear-gradient(180deg, rgba(0,0,0,.12) 0%, transparent 72%, #050505 100%) !important;
+}
+.middle-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    padding-top: 56.28vw !important;
+}
+.middle-copy {
+    position: absolute !important;
+    top: clamp(34px, 5vw, 76px) !important;
+    left: 0 !important;
+    max-width: min(540px, 46%) !important;
+    margin: 0 !important;
+    z-index: 3;
+}
+.middle-layout .journey-panel {
+    display: flex !important;
+    flex-direction: column !important;
+    width: min(680px, 100%) !important;
+    max-width: 680px !important;
+    margin: clamp(24px, 3vw, 42px) auto 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+}
+.middle-layout .journey-step {
+    display: grid !important;
+    grid-template-columns: 64px minmax(0, 1fr) !important;
+    align-items: start !important;
+    gap: 18px !important;
+    padding: 22px 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,.17) !important;
+    background: transparent !important;
+}
+.middle-layout .journey-step:last-child { border-bottom: 0 !important; }
+.middle-layout .journey-number {
+    color: #ed4944 !important;
+    font-size: clamp(30px, 3vw, 42px) !important;
+    line-height: .95 !important;
+}
+.middle-layout .journey-step h3 {
+    margin: 0 0 7px !important;
+    font-size: clamp(22px, 2.2vw, 30px) !important;
+    letter-spacing: 1.5px !important;
+}
+.middle-layout .journey-step p {
+    max-width: 540px !important;
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+}
+@media (max-width: 760px) {
+    .middle-poster { padding: 0 6% 64px !important; }
+    .middle-poster-image { object-position: center top !important; }
+    .middle-poster-shade { height: 56.28vw !important; }
+    .middle-layout { padding-top: 56.28vw !important; }
+    .middle-copy {
+        top: 4vw !important;
+        left: 0 !important;
+        max-width: 55% !important;
+    }
+    .middle-copy h2 { font-size: clamp(30px, 7vw, 48px) !important; }
+    .middle-copy p { font-size: 10px !important; line-height: 1.5 !important; }
+    .middle-copy .section-label { font-size: 8px !important; letter-spacing: 1.5px !important; }
+    .middle-layout .journey-panel { width: 100% !important; margin-top: 20px !important; }
+    .middle-layout .journey-step { grid-template-columns: 48px minmax(0,1fr) !important; gap: 12px !important; padding: 17px 0 !important; }
+    .middle-layout .journey-number { font-size: 28px !important; }
+    .middle-layout .journey-step h3 { font-size: 21px !important; }
+    .middle-layout .journey-step p { font-size: 11px !important; }
+}
+
+
+/* MIDDLE POSTER — desktop split composition: copy on the left, car on the right.
+   Mobile layout remains unchanged. */
+@media (min-width: 761px) {
+    .middle-poster {
+        position: relative !important;
+        min-height: 760px !important;
+        height: auto !important;
+        padding: 76px 7% 72px !important;
+        overflow: hidden !important;
+        background: #050505 !important;
+    }
+    .middle-poster-image {
+        inset: 0 0 0 auto !important;
+        width: 64% !important;
+        height: 100% !important;
+        aspect-ratio: auto !important;
+        object-fit: contain !important;
+        object-position: right center !important;
+        background: #050505 !important;
+    }
+    .middle-poster-shade {
+        inset: 0 !important;
+        height: 100% !important;
+        background:
+            linear-gradient(90deg, #050505 0%, rgba(5,5,5,.96) 28%, rgba(5,5,5,.70) 44%, rgba(5,5,5,.08) 72%, rgba(5,5,5,.02) 100%),
+            linear-gradient(180deg, rgba(5,5,5,.10), transparent 65%, #050505 100%) !important;
+    }
+    .middle-layout {
+        position: relative !important;
+        z-index: 2 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+        gap: 38px !important;
+        width: 100% !important;
+        min-height: 610px !important;
+        padding-top: 0 !important;
+    }
+    .middle-copy {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        max-width: min(500px, 43%) !important;
+        margin: 0 !important;
+    }
+    .middle-layout .journey-panel {
+        display: flex !important;
+        flex-direction: column !important;
+        width: min(500px, 43%) !important;
+        max-width: 500px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 0 !important;
+    }
+    .middle-layout .journey-step {
+        grid-template-columns: 54px minmax(0,1fr) !important;
+        gap: 14px !important;
+        padding: 15px 0 !important;
+    }
+}
+
+
+/* Gaadi Sarathi supplied brand logo — shared across all pages */
+.site-logo-img {
+    display: block;
+    width: 190px;
+    height: 64px;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: left center;
+}
+.logo {
+    flex: 0 0 auto;
+}
+.footer-site-logo {
+    display: block;
+    width: min(340px, 90%);
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
+    object-position: left center;
+}
+.footer-logo-placeholder {
+    border: 0 !important;
+    background: transparent !important;
+}
+@media (max-width: 650px) {
+    .site-logo-img { width: 158px; height: 54px; }
+    .footer-site-logo { width: min(280px, 90%); }
+}

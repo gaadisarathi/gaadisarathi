@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Cars | Gaadi Sarathi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="explore-page">
+
+<header class="navbar" id="navbar">
+    <a href="index.html" class="logo"><img src="public/images/gaadi/gaadisarathi-monochrome-logo.png" alt="Gaadi Sarathi" class="site-logo-img"></a>
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore Cars</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="articles.html">Articles</a>
+        <a href="about.html">About Us</a>
+        <a href="send-enquiry.html">Send Enquiry</a>
+    </nav>
+    <a href="book-appointment.html" class="nav-button">Book Appointment <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+    <section class="simple-page-hero">
+        <span class="section-label">FIND YOUR MACHINE</span>
+        <h1>EXPLORE <span>CARS.</span></h1>
+        <p>Discover automobiles from different brands, segments and categories.</p>
+    </section>
+
+<section class="brand-directory page-section">
+        <div class="vehicle-showcase-heading brand-directory-heading">
+            <div>
+                <span class="section-label">THE AUTOMOTIVE DIRECTORY</span>
+                <h2>CHOOSE YOUR <span>BRAND.</span></h2>
+            </div>
+            <p>From everyday favourites to extraordinary machines, explore the brands shaping the roads in India and around the world.</p>
+        </div>
+
+        <div class="brand-directory-tools">
+            <label class="brand-search-wrap" for="brandSearch">
+                <span aria-hidden="true">⌕</span>
+                <input id="brandSearch" type="search" placeholder="Search any car brand..." autocomplete="off">
+            </label>
+            <div class="brand-filters" role="group" aria-label="Filter car brands">
+                <button class="brand-filter active" data-filter="all" type="button">ALL BRANDS</button>
+                <button class="brand-filter" data-filter="popular" type="button">POPULAR</button>
+                <button class="brand-filter" data-filter="premium" type="button">LUXURY & PERFORMANCE</button>
+                <button class="brand-filter" data-filter="ev" type="button">EV & NEW-AGE</button>
+                <button class="brand-filter" data-filter="legacy" type="button">LEGACY</button>
+            </div>
+        </div>
+
+        <div class="brand-directory-group" data-group="popular">
+            <div class="brand-group-title"><span>01 / EVERYDAY & MAINSTREAM</span><h3>MADE FOR <em>THE ROAD.</em></h3></div>
+            <div class="brand-grid" id="brandGrid">
+                <a class="brand-card" href="https://www.marutisuzuki.com/" target="_blank" rel="noopener" data-name="Maruti Suzuki" data-category="popular"><span class="brand-index">01</span><div class="brand-logo"><img src="public/images/brands/Maruti_Suzuki.png" alt="Maruti Suzuki logo" loading="lazy"><b>MS</b></div><strong>Maruti Suzuki</strong><small>INDIA'S EVERYDAY FAVOURITE</small></a>
+                <a class="brand-card" href="https://www.hyundai.com/in/en" target="_blank" rel="noopener" data-name="Hyundai" data-category="popular"><span class="brand-index">02</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/hyundai/FFFFFF" alt="Hyundai logo" loading="lazy"><b>H</b></div><strong>Hyundai</strong><small>PROGRESS FOR HUMANITY</small></a>
+                <a class="brand-card" href="https://cars.tatamotors.com/" target="_blank" rel="noopener" data-name="Tata Motors" data-category="popular ev"><span class="brand-index">03</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/tata/FFFFFF" alt="Tata Motors logo" loading="lazy"><b>T</b></div><strong>Tata Motors</strong><small>CONNECTING ASPIRATIONS</small></a>
+                <a class="brand-card" href="https://auto.mahindra.com/" target="_blank" rel="noopener" data-name="Mahindra" data-category="popular ev"><span class="brand-index">04</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/mahindra/FFFFFF" alt="Mahindra logo" loading="lazy"><b>M</b></div><strong>Mahindra</strong><small>RISE</small></a>
+                <a class="brand-card" href="https://www.toyotabharat.com/" target="_blank" rel="noopener" data-name="Toyota" data-category="popular"><span class="brand-index">05</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/toyota/FFFFFF" alt="Toyota logo" loading="lazy"><b>T</b></div><strong>Toyota</strong><small>LET'S GO PLACES</small></a>
+                <a class="brand-card" href="https://www.kia.com/in/home.html" target="_blank" rel="noopener" data-name="Kia" data-category="popular"><span class="brand-index">06</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/kia/FFFFFF" alt="Kia logo" loading="lazy"><b>K</b></div><strong>Kia</strong><small>MOVEMENT THAT INSPIRES</small></a>
+                <a class="brand-card" href="https://www.hondacarindia.com/" target="_blank" rel="noopener" data-name="Honda" data-category="popular"><span class="brand-index">07</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/honda/FFFFFF" alt="Honda logo" loading="lazy"><b>H</b></div><strong>Honda</strong><small>THE POWER OF DREAMS</small></a>
+                <a class="brand-card" href="https://www.skoda-auto.co.in/" target="_blank" rel="noopener" data-name="Skoda" data-category="popular"><span class="brand-index">08</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/skoda/FFFFFF" alt="Škoda logo" loading="lazy"><b>Š</b></div><strong>Škoda</strong><small>LET'S EXPLORE</small></a>
+                <a class="brand-card" href="https://www.volkswagen.co.in/" target="_blank" rel="noopener" data-name="Volkswagen" data-category="popular"><span class="brand-index">09</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/volkswagen/FFFFFF" alt="Volkswagen logo" loading="lazy"><b>VW</b></div><strong>Volkswagen</strong><small>DRIVE BIG</small></a>
+                <a class="brand-card" href="https://www.renault.co.in/" target="_blank" rel="noopener" data-name="Renault" data-category="popular"><span class="brand-index">10</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/renault/FFFFFF" alt="Renault logo" loading="lazy"><b>R</b></div><strong>Renault</strong><small>PASSION FOR LIFE</small></a>
+                <a class="brand-card" href="https://www.nissan.in/" target="_blank" rel="noopener" data-name="Nissan" data-category="popular"><span class="brand-index">11</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/nissan/FFFFFF" alt="Nissan logo" loading="lazy"><b>N</b></div><strong>Nissan</strong><small>INNOVATION THAT EXCITES</small></a>
+                <a class="brand-card" href="https://www.mgmotor.co.in/" target="_blank" rel="noopener" data-name="MG Motor" data-category="popular ev"><span class="brand-index">12</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/mg/FFFFFF" alt="MG Motor logo" loading="lazy"><b>MG</b></div><strong>MG Motor</strong><small>FOR THE DRIVE</small></a>
+                <a class="brand-card" href="https://www.citroen.in/" target="_blank" rel="noopener" data-name="Citroën" data-category="popular"><span class="brand-index">13</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/citroen/FFFFFF" alt="Citroën logo" loading="lazy"><b>CI</b></div><strong>Citroën</strong><small>INSPIRED BY YOU</small></a>
+                <a class="brand-card" href="https://www.jeep-india.com/" target="_blank" rel="noopener" data-name="Jeep" data-category="popular"><span class="brand-index">14</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/jeep/FFFFFF" alt="Jeep logo" loading="lazy"><b>J</b></div><strong>Jeep</strong><small>GO ANYWHERE. DO ANYTHING.</small></a>
+                <a class="brand-card" href="https://www.byd.com/in" target="_blank" rel="noopener" data-name="BYD" data-category="popular ev"><span class="brand-index">15</span><div class="brand-logo"><img src="public/images/brands/BYD.png" alt="BYD logo" loading="lazy"><b>BYD</b></div><strong>BYD</strong><small>BUILD YOUR DREAMS</small></a>
+                <a class="brand-card" href="https://www.vinfastauto.in/" target="_blank" rel="noopener" data-name="VinFast" data-category="popular ev"><span class="brand-index">16</span><div class="brand-logo"><img src="public/images/brands/VinFast.png" alt="VinFast logo" loading="lazy"><b>VF</b></div><strong>VinFast</strong><small>THE FUTURE OF MOBILITY</small></a>
+                <a class="brand-card" href="https://www.forcemotors.com/" target="_blank" rel="noopener" data-name="Force Motors" data-category="popular"><span class="brand-index">17</span><div class="brand-logo"><img src="public/images/brands/Force.png" alt="Force Motors logo" loading="lazy"><b>FM</b></div><strong>Force Motors</strong><small>ENGINEERED FOR EXCELLENCE</small></a>
+                <a class="brand-card" href="https://www.isuzu.in/" target="_blank" rel="noopener" data-name="Isuzu" data-category="popular"><span class="brand-index">18</span><div class="brand-logo"><img src="public/images/brands/Isuzu(1).png" alt="Isuzu logo" loading="lazy"><b>I</b></div><strong>Isuzu</strong><small>REAL PARTNERS. REAL JOURNEYS.</small></a>
+            </div>
+        </div>
+
+        <div class="brand-directory-group" data-group="premium">
+            <div class="brand-group-title"><span>02 / LUXURY & PERFORMANCE</span><h3>BUILT TO <em>BE DESIRED.</em></h3></div>
+            <div class="brand-grid">
+                <a class="brand-card" href="https://www.mercedes-benz.co.in/" target="_blank" rel="noopener" data-name="Mercedes-Benz" data-category="premium"><span class="brand-index">19</span><div class="brand-logo"><img src="public/images/brands/Mercedes_Benz.png" alt="Mercedes-Benz logo" loading="lazy"><b>MB</b></div><strong>Mercedes-Benz</strong><small>THE BEST OR NOTHING</small></a>
+                <a class="brand-card" href="https://www.bmw.in/" target="_blank" rel="noopener" data-name="BMW" data-category="premium"><span class="brand-index">20</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/bmw/FFFFFF" alt="BMW logo" loading="lazy"><b>BMW</b></div><strong>BMW</strong><small>THE ULTIMATE DRIVING MACHINE</small></a>
+                <a class="brand-card" href="https://www.audi.in/" target="_blank" rel="noopener" data-name="Audi" data-category="premium"><span class="brand-index">21</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/audi/FFFFFF" alt="Audi logo" loading="lazy"><b>A</b></div><strong>Audi</strong><small>VORSPRUNG DURCH TECHNIK</small></a>
+                <a class="brand-card" href="https://www.volvocars.com/in/" target="_blank" rel="noopener" data-name="Volvo" data-category="premium"><span class="brand-index">22</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/volvo/FFFFFF" alt="Volvo logo" loading="lazy"><b>V</b></div><strong>Volvo</strong><small>FOR LIFE</small></a>
+                <a class="brand-card" href="https://www.lexusindia.co.in/" target="_blank" rel="noopener" data-name="Lexus" data-category="premium"><span class="brand-index">23</span><div class="brand-logo"><img src="public/images/brands/Lexus.png" alt="Lexus logo" loading="lazy"><b>L</b></div><strong>Lexus</strong><small>EXPERIENCE AMAZING</small></a>
+                <a class="brand-card" href="https://www.landrover.in/" target="_blank" rel="noopener" data-name="Land Rover" data-category="premium"><span class="brand-index">24</span><div class="brand-logo"><img src="public/images/brands/Land_Rover.png" alt="Land Rover logo" loading="lazy"><b>LR</b></div><strong>Land Rover</strong><small>ABOVE & BEYOND</small></a>
+                <a class="brand-card" href="https://www.jaguar.in/" target="_blank" rel="noopener" data-name="Jaguar" data-category="premium"><span class="brand-index">25</span><div class="brand-logo"><img src="public/images/brands/Jaguar.png" alt="Jaguar logo" loading="lazy"><b>J</b></div><strong>Jaguar</strong><small>THE ART OF PERFORMANCE</small></a>
+                <a class="brand-card" href="https://www.mini.in/" target="_blank" rel="noopener" data-name="MINI" data-category="premium"><span class="brand-index">26</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/mini/FFFFFF" alt="MINI logo" loading="lazy"><b>MINI</b></div><strong>MINI</strong><small>BIG LOVE</small></a>
+                <a class="brand-card" href="https://www.porsche.com/middle-east/_india_/" target="_blank" rel="noopener" data-name="Porsche" data-category="premium"><span class="brand-index">27</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/porsche/FFFFFF" alt="Porsche logo" loading="lazy"><b>P</b></div><strong>Porsche</strong><small>THERE IS NO SUBSTITUTE</small></a>
+                <a class="brand-card" href="https://www.lamborghini.com/" target="_blank" rel="noopener" data-name="Lamborghini" data-category="premium"><span class="brand-index">28</span><div class="brand-logo"><img src="public/images/brands/Lamborghini.png" alt="Lamborghini logo" loading="lazy"><b>L</b></div><strong>Lamborghini</strong><small>EXPECT THE UNEXPECTED</small></a>
+                <a class="brand-card" href="https://www.ferrari.com/" target="_blank" rel="noopener" data-name="Ferrari" data-category="premium"><span class="brand-index">29</span><div class="brand-logo"><img src="public/images/brands/Ferarri.png" alt="Ferrari logo" loading="lazy"><b>F</b></div><strong>Ferrari</strong><small>WE ARE THE COMPETITION</small></a>
+                <a class="brand-card" href="https://www.rolls-roycemotorcars.com/" target="_blank" rel="noopener" data-name="Rolls-Royce" data-category="premium"><span class="brand-index">30</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/rollsroyce/FFFFFF" alt="Rolls-Royce logo" loading="lazy"><b>RR</b></div><strong>Rolls-Royce</strong><small>INSPIRED BY THE FUTURE</small></a>
+                <a class="brand-card" href="https://www.bentleymotors.com/" target="_blank" rel="noopener" data-name="Bentley" data-category="premium"><span class="brand-index">31</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/bentley/FFFFFF" alt="Bentley logo" loading="lazy"><b>B</b></div><strong>Bentley</strong><small>EXTRAORDINARY JOURNEYS</small></a>
+                <a class="brand-card" href="https://www.astonmartin.com/" target="_blank" rel="noopener" data-name="Aston Martin" data-category="premium"><span class="brand-index">32</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/astonmartin/FFFFFF" alt="Aston Martin logo" loading="lazy"><b>AM</b></div><strong>Aston Martin</strong><small>POWER. BEAUTY. SOUL.</small></a>
+                <a class="brand-card" href="https://www.maserati.com/" target="_blank" rel="noopener" data-name="Maserati" data-category="premium"><span class="brand-index">33</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/maserati/FFFFFF" alt="Maserati logo" loading="lazy"><b>M</b></div><strong>Maserati</strong><small>ANOTHER LEVEL OF LUXURY</small></a>
+                <a class="brand-card" href="https://cars.mclaren.com/" target="_blank" rel="noopener" data-name="McLaren" data-category="premium"><span class="brand-index">34</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/mclaren/FFFFFF" alt="McLaren logo" loading="lazy"><b>Mc</b></div><strong>McLaren</strong><small>NEVER STOP RACING</small></a>
+            </div>
+        </div>
+
+        <div class="brand-directory-group" data-group="legacy">
+            <div class="brand-group-title"><span>03 / ICONIC & LEGACY</span><h3>THE NAMES THAT <em>LEFT A MARK.</em></h3></div>
+            <div class="brand-grid">
+                <a class="brand-card legacy-card" href="https://www.ford.com/" target="_blank" rel="noopener" data-name="Ford" data-category="legacy"><span class="brand-index">35</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/ford/FFFFFF" alt="Ford logo" loading="lazy"><b>F</b></div><strong>Ford</strong><small>BUILT FORD TOUGH</small></a>
+                <a class="brand-card legacy-card" href="https://www.chevrolet.com/" target="_blank" rel="noopener" data-name="Chevrolet" data-category="legacy"><span class="brand-index">36</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/chevrolet/FFFFFF" alt="Chevrolet logo" loading="lazy"><b>C</b></div><strong>Chevrolet</strong><small>FIND NEW ROADS</small></a>
+                <a class="brand-card legacy-card" href="https://www.fiat.com/" target="_blank" rel="noopener" data-name="Fiat" data-category="legacy"><span class="brand-index">37</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/fiat/FFFFFF" alt="Fiat logo" loading="lazy"><b>FIAT</b></div><strong>Fiat</strong><small>ITALIAN STYLE</small></a>
+                <a class="brand-card legacy-card" href="https://www.datsun.com/" target="_blank" rel="noopener" data-name="Datsun" data-category="legacy"><span class="brand-index">38</span><div class="brand-logo"><img src="https://cdn.simpleicons.org/datsun/FFFFFF" alt="Datsun logo" loading="lazy"><b>D</b></div><strong>Datsun</strong><small>REDEFINED</small></a>
+                <a class="brand-card legacy-card" href="https://www.ambassadorcars.com/" target="_blank" rel="noopener" data-name="Hindustan Motors Ambassador" data-category="legacy"><span class="brand-index">39</span><div class="brand-logo"><b>HM</b></div><strong>Hindustan Motors</strong><small>THE AMBASSADOR LEGACY</small></a>
+                <a class="brand-card legacy-card" href="https://www.premier.co.in/" target="_blank" rel="noopener" data-name="Premier" data-category="legacy"><span class="brand-index">40</span><div class="brand-logo"><b>P</b></div><strong>Premier</strong><small>AN INDIAN AUTOMOTIVE ICON</small></a>
+            </div>
+        </div>
+        <p class="brand-empty" id="brandEmpty" hidden>No brands found. Try another search.</p>
+        <p class="brand-note">Brand names and logos belong to their respective owners. Availability and model line-ups may change by market.</p>
+    </section>
+
+
+    <section class="vehicle-showcase">
+        <div class="vehicle-showcase-heading">
+            <div>
+                <span class="section-label">A CLOSER LOOK</span>
+                <h2>EXPLORE THE <span>MACHINES.</span></h2>
+            </div>
+            <p>A glimpse of the body styles and personalities you'll explore as you find a car that fits your everyday life.</p>
+        </div>
+        <div class="vehicle-showcase-grid">
+            <article class="vehicle-showcase-card">
+                <small>01 / SUV SHOWCASE</small>
+                <h3>BUILT TO STAND OUT.</h3>
+                <p>Explore design, space, road presence and everyday practicality.</p>
+            </article>
+            <article class="vehicle-showcase-card">
+                <small>02 / PREMIUM SUV</small>
+                <h3>COMFORT MEETS CAPABILITY.</h3>
+                <p>Look beyond the features and understand the ownership trade-offs.</p>
+            </article>
+            <article class="vehicle-showcase-card">
+                <small>03 / EXECUTIVE SEDAN</small>
+                <h3>REFINEMENT IN MOTION.</h3>
+                <p>Consider comfort, performance and the cost of keeping it.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="section-heading">
+            <div>
+                <span class="section-label">COMING TO THE GARAGE</span>
+                <h2>THE WORLD OF <span>CARS.</span></h2>
+            </div>
+        </div>
+
+        <div class="discover-grid">
+            <a href="#" class="discover-card">
+                <span class="discover-number">01 / SEGMENT</span>
+                <h3>HATCHBACKS</h3>
+                <p>Compact cars designed for everyday journeys.</p>
+            </a>
+
+            <a href="#" class="discover-card">
+                <span class="discover-number">02 / SEGMENT</span>
+                <h3>SEDANS</h3>
+                <p>Comfort, elegance and performance.</p>
+            </a>
+
+            <a href="#" class="discover-card">
+                <span class="discover-number">03 / SEGMENT</span>
+                <h3>SUVs</h3>
+                <p>Explore versatile machines built for every road.</p>
+            </a>
+
+            <a href="#" class="discover-card">
+                <span class="discover-number">04 / SEGMENT</span>
+                <h3>SPORTS CARS</h3>
+                <p>Performance machines made for enthusiasts.</p>
+            </a>
+
+            <a href="#" class="discover-card">
+                <span class="discover-number">05 / SEGMENT</span>
+                <h3>ELECTRIC CARS</h3>
+                <p>Discover the future of mobility.</p>
+            </a>
+
+            <a href="compare.html" class="discover-card">
+                <span class="discover-number">06 / TOOL</span>
+                <h3>CAR COMPARISON</h3>
+                <p>Compare different automobiles side by side.</p>
+                <span class="discover-arrow">↗</span>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-main">
+        <a href="index.html" class="logo"><img src="public/images/gaadi/gaadisarathi-monochrome-logo.png" alt="Gaadi Sarathi" class="site-logo-img"></a>
+        <p>EVERY DRIVE HAS A STORY.</p>
+        <a href="#" class="back-top">BACK TO TOP ↑</a>
+    </div>
+    <div class="footer-bottom">
+        <p>© <span id="year"></span> Gaadi Sarathi. All rights reserved.</p>
+        <p>MADE FOR AUTOMOTIVE ENTHUSIASTS.</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/brands.js"></script>
+</body>
+</html>
